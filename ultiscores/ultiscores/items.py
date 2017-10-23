@@ -9,8 +9,8 @@ import scrapy
 
 
 class UltiscoresItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
+    """Scrapy item to collect score reports."""
+
     home = scrapy.Field()
     away = scrapy.Field()
     homescore = scrapy.Field()
@@ -18,4 +18,10 @@ class UltiscoresItem(scrapy.Item):
     date = scrapy.Field()
     tourney = scrapy.Field()
     div = scrapy.Field()
-    
+
+
+class Team(scrapy.Item):
+    """Scrapy item to collect team locations."""
+
+    teamname = scrapy.Field()
+    hometown = scrapy.Field()
